@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover the world | CS project</title>
+    
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/826/826070.png"> 
+
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e67e22;
+            --light-bg: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-bg);
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        nav {
+            background: var(--primary);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 10px 5%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .nav-logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li { margin: 0 15px; }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover { color: var(--accent); }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1600&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            height: 650px; 
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero h1 { 
+            font-size: 4.5rem; 
+            margin-bottom: 15px; 
+            text-shadow: 0px 4px 20px rgba(0,0,0,0.6);
+            letter-spacing: 2px;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .hero p { 
+            font-size: 1.6rem; 
+            max-width: 900px; 
+            font-weight: 400;
+            text-shadow: 0px 2px 10px rgba(0,0,0,0.5);
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        section { padding: 80px 10%; }
+        .section-header { text-align: center; margin-bottom: 50px; }
+        .section-header h2 { font-size: 2.8rem; color: var(--primary); margin-bottom: 10px; }
+
+        .container { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 30px; 
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: 0.4s ease;
+            text-align: center;
+        }
+
+        .card:hover { transform: translateY(-15px); box-shadow: 0 20px 40px rgba(0,0,0,0.2); }
+        .card img { width: 100%; height: 250px; object-fit: cover; transition: 0.5s; }
+        .card:hover img { scale: 1.1; }
+        .card-body { padding: 25px; }
+        .card-body h3 { margin: 0; color: var(--primary); font-size: 1.4rem; }
+
+        .btn-explore {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 30px;
+            background-color: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .btn-explore:hover { background-color: #d35400; box-shadow: 0 5px 15px rgba(230, 126, 34, 0.4); }
+
+        .contact-form {
+            background: white;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .form-group { margin-bottom: 20px; text-align: left; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: bold; color: var(--primary); }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+
+        .btn-submit {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            width: 100%;
+            transition: 0.3s;
+        }
+        .btn-submit:hover { background: var(--secondary); }
+
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 60px 10% 30px;
+            text-align: center;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+            text-align: left;
+        }
+
+        .footer-section h4 {
+            color: var(--accent);
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .footer-section p { font-size: 0.9rem; line-height: 1.6; margin: 5px 0; color: #ecf0f1; }
+        .supervisor { font-size: 1.3rem; font-weight: bold; border: 2px solid var(--accent); display: inline-block; padding: 10px 20px; border-radius: 10px; margin-bottom: 20px; }
+        .copyright { text-align: center; border-top: 1px solid #444; padding-top: 20px; font-size: 0.8rem; margin-top: 40px; color: #bdc3c7; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#" class="nav-logo">
+            <img src="https://cdn-icons-png.flaticon.com/512/826/826070.png " alt="Logo"> 
+            <span>World Tour</span>
+        </a>
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#destinations">Destinations</a></li>
+            <li><a href="#book">Book Now</a></li>
+            <li><a href="#team">Our Team</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero" id="hero">
+        <h1>Tour Around The World</h1>
+        <p>Architecture,Cultuer,and History:All in one Click</p>
+    </header>
+
+    <section id="destinations">
+        <div class="section-header">
+            <h2>Select Your Destination</h2>
+        </div>
+        
+        <div class="container">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&w=800&q=80" alt="Egypt Pyramids">
+                <div class="card-body"><h3>Egypt</h3><a href="egypt.html" class="btn-explore">Explore</a></div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1539020140153-e479b8c22e70?auto=format&fit=crop&w=800&q=80" alt="Morocco Chefchaouen">
+                <div class="card-body"><h3>Morocco</h3><a href="morocco.html" class="btn-explore">Explore</a></div>
+            </div>
+
+            <div class="card">
+                <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/95/af/c4/beirut-marina-at-night.jpg?w=800&h=500&s=1" alt="Lebanon Raouche">
+                <div class="card-body"><h3>Lebanon</h3><a href="lebanon.html" class="btn-explore">Explore</a></div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?auto=format&fit=crop&w=800&q=80" alt="Saudi Arabia Al-Ula">
+                <div class="card-body"><h3>Saudi Arabia</h3><a href="saudi.html" class="btn-explore">Explore</a></div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=800&q=80" alt="Turkey Cappadocia">
+                <div class="card-body"><h3>Turkey</h3><a href="turkey.html" class="btn-explore">Explore</a></div>
+            </div>
+
+            <div class="card">
+                <img src="https://assets.misbar.com/form/16bb497e8df92a88e0149a91bc6e023dee17d01b.jpg" alt="Japan Kyoto">
+                <div class="card-body"><h3>Japan</h3><a href="japan.html" class="btn-explore">Explore</a></div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=80" alt="France Paris">
+                <div class="card-body"><h3>France</h3><a href="france.html" class="btn-explore">Explore</a></div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=800&q=80" alt="Italy Rome">
+                <div class="card-body"><h3>Italy</h3><a href="italy.html" class="btn-explore">Explore</a></div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1485738422979-f5c462d49f74?auto=format&fit=crop&w=800&q=80" alt="USA New York">
+                <div class="card-body"><h3>USA</h3><a href="usa.html" class="btn-explore">Explore</a></div>
+            </div>
+
+            <div class="card">
+                <img src="https://veles-club.com/_image?href=https%3A%2F%2Fdigital.veles-club.com%2Fuploads%2F2a4til2a4til2a4til_2024_04_08_c82e1f3436.jpg&w=1440&h=946&q=85&f=webp" alt="Mexico Chichen Itza">
+                <div class="card-body"><h3>Mexico</h3><a href="mexico.html" class="btn-explore">Explore</a></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="book" style="background-color: #e9ecef;">
+        <div class="section-header">
+            <h2>Start Your Journey</h2>
+            <p>Fill the form and we will contact you soon!</p>
+        </div>
+        <div class="contact-form">
+            <form action="#">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="destination">Select Destination</label>
+                    <select id="destination" name="destination">
+                        <option value="egypt">Egypt</option>
+                        <option value="morocco">Morocco</option>
+                        <option value="lebanon">Lebanon</option>
+                        <option value="saudi">Saudi Arabia</option>
+                        <option value="turkey">Turkey</option>
+                        <option value="japan">Japan</option>
+                        <option value="france">France</option>
+                        <option value="italy">Italy</option>
+                        <option value="usa">USA</option>
+                        <option value="mexico">Mexico</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Additional Requests</label>
+                    <textarea id="message" name="message" rows="4" placeholder="How can we help you?"></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Submit Request</button>
+            </form>
+        </div>
+    </section>
+
+    <footer id="team">
+        <div class="supervisor">Supervised by: Dr. Eman Hanafy</div>
+        
+        <div class="footer-grid">
+            <div class="footer-section">
+                <h4>Web Structuring (HTML & CSS)</h4>
+                <p>Amira Essam El-Metwally Mahmoud</p>
+                 <p>Asmaa Ayman Abdel-Sattar Abdel-Ghaffar</p>
+                <p>Arwa Mohamed Amin Shehib</p>
+                <p>Salma Ahmed Gharib Mohamed</p>
+                <p>Asmaa Gamal Abdel-Al Ali</p>
+                <p>Esraa Taha Hassan Hassan</p>
+                <p>Aya Mesbah El-Sayed</p>
+            </div>
+            <div class="footer-section">
+                <h4>Scripting & Automation (Batch)</h4>
+                <p>Tuqa Khaled Mohamed Mohamed</p>
+                <p>Alaa Ahmed Mahmoud Abdel-Ati</p>
+                <p>Haneen Ibrahim Ahmed Abdel-Qawi</p>
+                <p>Sarah Sameh Ibrahim</p>
+                <p>Reem Belal Ibrahim Mahmoud</p>
+                <p>Haneen Ali El-Sayed</p>
+            </div>
+            <div class="footer-section">
+                <h4>System Integration (Linking)</h4>
+                <p>Haneen Adel Mohamed Fayed</p>
+                <p>Rahma Atef Fathy</p>
+                <p>Rana Ahmed Abdullah Mahmoud</p>
+                <p>Aya Mahmoud Ramadan Gomaa</p>
+                <p>Asmaa Mohamed Farouk Ismail</p>
+                <p>Asmaa Hassan Saeed Abdel-Azim</p>
+            </div>
+            <div class="footer-section">
+                <h4>Data Research & Collection</h4>
+                <p>Rahma Attia Mohamed Ali</p>
+                <p>Sarah Ahmed Mahmoud Hassan Sheta</p>
+                <p>Habiba Wajih Tawfiq</p>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>CS Department Project | Group 4 | &copy; 2026 All Rights Reserved</p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,269 @@
+manga:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Discover Italy</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial;
+    background : rgb(162, 204, 154);
+}
+
+.hero{
+    background-image:url('https://gotripzi.com/cdn-cgi/image/onerror=redirect,width=3200,height=2400,fit=cover,format=png/_astro/palermo-it-hero.FRcUT08Q.webp');
+    background-size:cover;
+    background-position:center;
+    height:350px;
+    color:rgb(255, 255, 255);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    font-size:40px;
+    font-weight:bold;
+}
+
+.hero small{
+    font-size:18px;
+    margin-top:10px;
+}
+
+.back{
+    position:absolute;
+    top:20px;
+    left:20px;
+}
+
+.back a{
+    text-decoration:none;
+    background:rgb(198, 20, 20);
+    color:white;
+    padding:10px 18px;
+    border-radius:8px;
+}
+
+.section{
+    width:85%;
+    margin:30px auto;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    margin-bottom:25px;
+}
+
+h2{
+    color:darkred;
+}
+
+.section .card:nth-child(1) h2,
+.section .card:nth-child(2) h2{
+    text-align:left;
+}
+
+.section .card:nth-child(3) h2,
+.section .card:nth-child(4) h2,
+.section .card:nth-child(5) h2{
+    text-align:center;
+}
+
+p{
+    font-size:18px;
+    line-height:1.8;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.box{
+    background:white;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    text-align:center;
+}
+
+.box img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.box p{
+    color:rgb(198, 20, 20);
+    font-weight:bold;
+    padding:10px;
+    font-size:15px;
+}
+
+.food{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.currency{
+    text-align:center;
+}
+
+.currency img{
+    width:300px;
+    height:200px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.footer{
+    text-align:center;
+    margin:30px;
+}
+
+.footer a{
+    text-decoration:none;
+    background:darkred;
+    color:white;
+    padding:12px 25px;
+    border-radius:10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="back">
+    <a href="index.html">← Back</a>
+</div>
+
+<div class="hero">
+    Welcome To Italy
+    <small>• History • Culture • Civilization</small>
+</div>
+
+<div class="section">
+
+    <!-- About Italy -->
+    <div class="card">
+        <h2>About Italy</h2>
+        <p>
+            Italy is a beautiful country in southern Europe. It has a rich history that includes the Roman Empire and the Renaissance period. Italy is famous for its art, architecture, and important influence on Western culture.
+        </p>
+    </div>
+
+    <!-- Culture -->
+    <div class="card">
+        <h2>Italian Culture</h2>
+        <p>
+            Italian culture is known for its art, music, and fashion. People are friendly and value family and traditions. Italy is famous for its festivals, historical cities, and delicious cuisine.
+        </p>
+    </div>
+
+    <!-- Places -->
+    <div class="card">
+        <h2>Famous Places</h2>
+
+        <div class="grid">
+
+            <div class="box">
+                <img src="https://cdn.britannica.com/36/162636-050-932C5D49/Colosseum-Rome-Italy.jpg">
+                <p>
+                    <b>Colosseum:</b> An ancient amphitheater in Rome and one of the greatest symbols of the Roman Empire.
+                </p>
+            </div>
+
+            <div class="box">
+                <img src="https://cdn.britannica.com/02/152202-050-4D73E046/Leaning-Tower-of-Pisa-cathedral-Italy.jpg">
+                <p>
+                    <b>Leaning Tower of Pisa:</b> A famous tower known for its unique tilt.
+                </p>
+            </div>
+
+            <div class="box">
+                <img src="https://i0.wp.com/misaha.com/wp-content/uploads/2024/09/image-525.png?resize=1024,683&ssl=1">
+                <p>
+                    <b>Venice:</b> A romantic city built on water with beautiful canals.
+                </p>
+
+</div>
+            <div class="box">
+                <img src="https://tourismmedia.italia.it/is/image/mitur/20210401173629-firenze-toscana-gettyimages-1145040590-2?wid=1600&hei=900&fit=constrain,1&fmt=webp">
+                <p>
+                    <b>Florence:</b> The birthplace of the Renaissance, full of art and history.
+                </p>
+            </div>
+
+            <div class="box">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Trevi_Fountain%2C_Rome%2C_Italy_2_-_May_2007.jpg">
+                <p>
+                    <b>Trevi Fountain:</b> One of the most famous fountains in the world.
+                </p>
+            </div>
+
+            <div class="box">
+                <img src="https://vstatic.vietnam.vn/vietnam/resource/IMAGE/2025/9/3/9de6ef5ee3784c0ea72c957e182f06bf">
+                <p>
+                    <b>Milan Cathedral:</b> A stunning example of Gothic architecture.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Food -->
+    <div class="card">
+        <h2>Famous Food</h2>
+
+        <div class="food">
+            <div class="box">
+                <img src="https://png.pngtree.com/thumb_back/fh260/background/20241101/pngtree-a-close-up-view-of-newly-baked-neapolitan-pizza-image_16489172.jpg">
+                <p>Pizza</p>
+            </div>
+
+            <div class="box">
+                <img src="https://img.delicious.com.au/iXWY-wHR/w1200-h1200-cfill-q80/del/2015/10/chilli-chicken-pasta-with-garlic-olives-and-capers-13785-1.jpg">
+                <p>Pasta</p>
+            </div>
+
+            <div class="box">
+                <img src="https://staticcookist.akamaized.net/wp-content/uploads/sites/22/2024/09/THUMB-VIDEO-2_rev1-56.jpeg">
+                <p>Tiramisu</p>
+            </div>
+
+        </div>
+    </div>
+<div style="text-align:center; margin:40px 0;">
+    
+    <h2 style="margin-bottom:15px; color:#a00212;">
+        Explore Italy
+    </h2>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Bsti-zWGKXA?si=f9ZeqH3G1eYjs5X8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+</div>
+    <div class="card">
+        <h2>Currency of Italy</h2>
+
+        <div class="currency">
+            <img src="https://almaal.org/wp-content/uploads/2022/08/%D9%85%D8%A7-%D9%87%D9%8A-%D8%B9%D9%85%D9%84%D8%A9-%D8%A7%D9%8A%D8%B7%D8%A7%D9%84%D9%8A%D8%A7.jpg">
+            <p>The official currency is the Euro (€).</p>
+        </div>
+    </div>
+
+</div>
+
+<div class="footer">
+    <a href="index.html">Back To Home</a>
+</div>
+
+</body>
+</html>

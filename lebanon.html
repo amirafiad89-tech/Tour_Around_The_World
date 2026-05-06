@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>Explore Lebanon</title>
+
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body{
+        background:#f4f4f4;
+        direction:rtl;
+    }
+
+    /* Navbar */
+    .navbar{
+        background:#8b0000;
+        padding:15px;
+        position:sticky;
+        top:0;
+        z-index:1000;
+    }
+
+    .navbar ul{
+        display:flex;
+        justify-content:center;
+        list-style:none;
+        gap:30px;
+    }
+
+    .navbar a{
+        color:white;
+        text-decoration:none;
+        font-size:18px;
+        font-weight:bold;
+    }
+
+    /* Hero Banner */
+    .hero{
+        height:500px;
+        background:url("https://media.elbalad.news/2024/12/large/6371065426945202412300618571857.jpg") center/cover;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        color:white;
+        font-size:55px;
+        font-weight:bold;
+        text-shadow:3px 3px 15px rgb(0, 0, 0);
+    }
+
+    section{
+        padding:60px 20px;
+        text-align:center;
+    }
+
+    h2{
+        color:#8b0000;
+        margin-bottom:20px;
+        font-size:32px;
+    }
+
+    p{
+        max-width:800px;
+        margin:auto;
+        line-height:1.8;
+        color:#333;
+    }
+
+    /* Cards */
+    .grid{
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+        gap:20px;
+        margin-top:30px;
+    }
+
+    .card{
+        background:white;
+        border-radius:15px;
+        overflow:hidden;
+        box-shadow:0 5px 15px rgba(0, 0, 0, 0.2);
+        transition:0.3s;
+    }
+
+    .card:hover{
+        transform:translateY(-10px);
+    }
+
+    .card img{
+        width:100%;
+        height:200px;
+        object-fit:cover;
+    }
+
+    .card h3{
+        padding:10px;
+        color:#8b0000;
+    }
+
+    .card p{
+        padding:0 10px 15px;
+        font-size:14px;
+    }
+
+    /* Footer */
+    footer{
+        background:#000000;
+        color:white;
+        text-align:center;
+        padding:20px;
+        margin-top:40px;
+    }
+</style>
+</head>
+
+<body>
+<div style="display:flex; justify-content:flex-end; padding:20px;">
+    <a href="index.html"
+       style="background:#8b0000; color:white; padding:10px 18px; border-radius:8px; text-decoration:none; font-weight:bold;">
+    Back ←
+    </a>
+</div>
+<!-- Navbar -->
+<div class="navbar">
+    <ul>
+        <li><a href="#food">Food</a></li>
+         <li><a href="#Entertainment places">Entertainment places</a></li>
+         <li><a href="#places">places</a></li>
+        <li><a href="#culture">culture</a></li>
+        <li><a href="#home">Home</a></li>
+         
+       
+    </ul>
+</div>
+
+<!-- Hero -->
+<div class="hero" id="home">
+    🇱🇧 Explore Lebanon 🇱🇧
+</div>
+
+<!-- About -->
+<section>
+    <h2>Lebanon</h2>
+    <p>
+        Lebanon is a charming country located on the Mediterranean Sea. It combines green mountains, the blue sea, and a rich history. It is known for its rich culture, delicious cuisine, and world-famous hospitality
+    </p>
+</section>
+<!-- Culture -->
+<section id="culture" style="padding:60px 20px; text-align:center;">
+    
+    <h2 style="color:#8b0000; margin-bottom:20px; font-size:32px;">
+        Lebanese Culture
+    </h2>
+
+    <p style="max-width:800px; margin:auto; line-height:1.8; color:#333; font-size:18px;">
+        Lebanese culture is a rich blend of traditions, history, and modern lifestyle. 
+        Lebanon is known for its diversity, where different religions and cultures live together 
+        in harmony. This diversity makes Lebanese society unique and vibrant.
+        
+        Hospitality is one of the most important values in Lebanon. People are friendly, 
+        welcoming, and love to share food and moments with others. Lebanese cuisine is famous 
+        worldwide for its delicious dishes like tabbouleh, hummus, and kibbeh.
+        
+        Music, art, and celebrations are essential parts of daily life. Lebanon also combines 
+        modern lifestyle with deep historical roots, making it one of the most culturally rich 
+        countries in the Middle East.
+    </p>
+
+
+    
+<img src="https://img.freepik.com/premium-photo/glowing-globe-open-book-symbol-knowledge_978147-5654.jpg?w=1000">
+</section>
+
+
+<!-- Places -->
+<section id="places">
+    <h2>Famous Places</h2>
+
+    <div class="grid">
+
+        
+        
+     <div class="card">
+    <img src="https://thumbs.dreamstime.com/z/restaurants-old-souk-byblos-jbeil-lebanon-middle-east-96829497.jpg">
+    <h3>Byblos (Jbeil)</h3>
+    <p>One of the oldest cities in the world with a beautiful sea view and ancient ruins.</p>
+</div>   
+
+<div class="card">
+    <img src="https://thumbs.dreamstime.com/b/baalbeck-lebanon-9365544.jpg">
+    <h3>Baalbek</h3>
+    <p>Famous for its massive Roman temples and historical significance.</p>
+</div>
+
+
+
+
+
+<div class="card">
+    <img src="https://pbs.twimg.com/media/Cw7OSt-XgAAHeUh.jpg">
+    <h3>Batroun</h3>
+    <p>A coastal town known for its beaches, nightlife, and old souks.</p>
+</div>
+
+
+    </div>
+
+</section>
+<section id="Entertainment places">
+    <h2>Famous Entertainment Places</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1589394815804-964ed0be2eb5">
+            <h3>Beirut</h3>
+            <p>The vibrant capital full of nightlife and history</p>
+        </div>
+
+        <div class="card">
+            <img src="https://maatgroup.net/wp-content/uploads/2021/01/2-64.jpg">
+            <h3> The Lebanon Mountains</h3>
+            <p> Breathtaking natural scenery and fresh air everywhere.</p>
+        </div>
+
+        
+
+
+
+<div class="card">
+    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1d/ca/15/5f/caption.jpg?w=800&h=800&s=1">
+    <h3>Jeita Grotto</h3>
+    <p>A stunning cave system with amazing rock formations and underground rivers.</p>
+</div>
+
+
+
+
+
+    </div>
+
+</section>
+
+<!-- Food -->
+<section id="food">
+    <h2>Famous Lebanese foods  </h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <img src="https://www.mashahir.net/wp-content/uploads/2017/11/%D8%AA%D8%A8%D9%88%D9%84%D8%A9_%D9%84%D8%A8%D9%86%D8%A7%D9%86%D9%8A%D8%A9.jpg">
+            <h3>Tabbouleh</h3>
+            <p>A refreshing salad full of herbs and fresh vegetables</p>
+        </div>
+
+        <div class="card">
+            <img src="https://cdn.mojnews.com/thumbnail/AGURsqwidvKX/wYsQRh7N_U9-KhUZFvV4AomaL5yZePK-ajtEs8kcp-9YVVASashH6K5BPTC17PhAidh8SlFsB25MgjrEllAeh3sJu7kjKCVa/%D8%BA%D8%B0%D8%A7%DB%8C+%D9%84%D8%A8%D9%86%D8%A7%D9%86%DB%8C+%D8%AD%D9%85%D8%B51.jpg">
+            <h3>Hummus</h3>
+            <p>A famous Eastern dish loved all over the world</p>
+        </div>
+
+        <div class="card">
+            <img src="https://kitchen.sayidaty.net/uploads/small/7a/7af73ac1eedaf85a6ef42a6df7da8d02_w750_h500.jpg">
+            <h3>Kibbeh</h3>
+            <p>One of the most famous traditional Lebanese dishes</p>
+        </div>
+
+    </div>
+</section>
+<div style="text-align:center; margin:40px 0;">
+    
+    <h2 style="margin-bottom:15px; color:#8b0000;">
+        Explore Lebanon
+    </h2>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/BPt7dbfw-4o?si=tOnRH-CWZKyh-eEC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+</div>
+<div class="card">
+    <h2 style="color:#8b0000; text-align:center;">Currency of Lebanon</h2>
+
+    <div style="text-align:center; margin-top:20px;">
+        <img src="https://www.shorouknews.com/uploadedimages/Sections/Politics/Arabic%20Press/original/%D8%A7%D9%86%D9%87%D9%8A%D8%A7%D8%B1_%D8%A7%D9%84%D9%84%D9%8A%D8%B1%D8%A9-%D8%A7%D9%84%D9%84%D8%A8%D9%86%D8%A7%D9%86%D9%8A%D8%A9.jpg"
+             style="width:300px; height:200px; object-fit:cover; border-radius:10px;">
+        
+        <p style="margin-top:15px; font-size:18px; line-height:1.7;">
+            The official currency of Lebanon is the Lebanese Pound (LBP). 
+            It is also known as the Lebanese Lira. 
+            Although the local currency is widely used, the US Dollar is also commonly accepted in many places.
+        </p>
+    </div>
+</div>
+
+<div style="text-align:center; margin:30px;">
+    <a href="index.html"
+       style="background:#8b0000; color:white; padding:12px 25px; border-radius:10px; text-decoration:none; font-weight:bold; display:inline-block;">
+        Back To Home
+    </a>
+</div>
+
+<footer>
+    © 2026 Lebanon Project | Made with ❤️
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,293 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Explore Japan | Land of the Rising Sun</title>
+
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body{
+        background:#f4f4f4;
+        direction: ltr; /* English direction */
+    }
+
+    /* Navbar */
+    .navbar{
+        background:#bc002d; /* Japanese Crimson Red */
+        padding:15px;
+        position:sticky;
+        top:0;
+        z-index:1000;
+    }
+
+    .navbar ul{
+        display:flex;
+        justify-content:center;
+        list-style:none;
+        gap:30px;
+    }
+
+    .navbar a{
+        color:white;
+        text-decoration:none;
+        font-size:18px;
+        font-weight:bold;
+        transition: 0.3s;
+    }
+
+    .navbar a:hover {
+        opacity: 0.8;
+    }
+
+    /* Hero Banner */
+    .hero{
+        height:500px;
+        background:url("https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80") center/cover;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        color:white;
+        font-size:55px;
+        font-weight:bold;
+        text-shadow:3px 3px 15px black;
+    }
+
+    section{
+        padding:60px 20px;
+        text-align:center;
+    }
+
+    h2{
+        color:#bc002d;
+        margin-bottom:20px;
+        font-size:32px;
+    }
+
+    p{
+        max-width:800px;
+        margin:auto;
+        line-height:1.8;
+        color:#333;
+    }
+
+    /* Cards */
+    .grid{
+        display:grid;
+        grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+        gap:20px;
+        margin-top:30px;
+    }
+
+    .card{
+        background:white;
+        border-radius:15px;
+        overflow:hidden;
+        box-shadow:0 5px 15px rgba(0,0,0,0.2);
+        transition:0.3s;
+    }
+
+    .card:hover{
+        transform:translateY(-10px);
+    }
+
+    .card img{
+        width:100%;
+        height:200px;
+        object-fit:cover;
+    }
+
+    .card h3{
+        padding:15px 10px 5px;
+        color:#bc002d;
+    }
+
+    .card p{
+        padding:0 15px 20px;
+        font-size:14px;
+        text-align: center;
+    }
+
+    /* Footer */
+    footer{
+        background:#222;
+        color:white;
+        text-align:center;
+        padding:20px;
+        margin-top:40px;
+    }
+</style>
+</head>
+
+<body>
+<div style="display:flex; justify-content:flex-start; padding:20px;">
+    <a href="index.html"
+       style="background:rgb(185, 18, 40); color:#f2eded; padding:10px 18px; border-radius:8px; text-decoration:none; font-weight:bold;">
+        ← Back
+    </a>
+</div>
+<div class="navbar">
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#culture">Culture</a></li>
+        <li><a href="#places">Places</a></li>
+        <li><a href="#Entertainment places">Entertainment Places</a></li>
+        <li><a href="#food">Food</a></li>
+        
+        
+    </ul>
+</div>
+
+<div class="hero" id="home">
+    🇯🇵 Explore Japan 🇯🇵
+</div>
+
+<section>
+    <h2>Japan (Land of the Rising Sun)</h2>
+    <p>
+        Japan is a mesmerizing archipelago in East Asia that perfectly balances cutting-edge technology with ancient traditions. Known for its mountainous islands, serene temples, and neon-lit cities, it offers a travel experience unlike anywhere else on Earth.
+    </p>
+</section>
+<section id="culture" style="padding:40px; text-align:center;">
+    <h2 style="color:#b3182d;">Japanese Culture</h2>
+    <p style="font-size:18px; line-height:1.8; max-width:800px; margin:auto;">
+        Japanese culture is a unique blend of traditional and modern influences. 
+        It is known for its respect, discipline, and strong values. 
+        Traditions such as tea ceremonies, wearing kimonos, and celebrating festivals 
+        like Cherry Blossom (Sakura) are important parts of Japanese life.
+        
+        At the same time, Japan is one of the most advanced countries in technology, 
+        combining innovation with deep cultural roots. Cleanliness, politeness, 
+        and respect for others are essential values in Japanese society.
+    </p>
+</section>
+<section id="places">
+    <h2>Famous Places</h2>
+    
+
+    <div class="grid">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1542051841857-5f90071e7989?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+            <h3>Tokyo</h3>
+            <p>The dazzling capital where futuristic skyscrapers meet historic shrines and bustling street markets.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+            <h3>Mount Fuji</h3>
+            <p>Japan's highest peak and a sacred national symbol, famous for its majestic snow-capped cone.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://pohcdn.com/sites/default/files/styles/paragraph__hero_banner__hb_image__1880bp/public/hero_banner/fushimi-inari-taisha-shrine-2_optimized.jpg">
+            <h3>Kyoto</h3>
+            <p>The cultural heart of Japan, home to thousands of classical Buddhist temples and Zen gardens.</p>
+        </div>
+     
+    </div>
+</section>
+</section>
+<section id="Entertainment places">
+    <h2>Famous Entertainment Places</h2>
+    
+
+    <div class="grid">
+
+       
+     <div class="card">
+    <img src="https://www.japan-guide.com/blog/koyo15/g/151106_fuji_13.jpg">
+    <p>
+        <h3>Lake Kawaguchi</h3> A beautiful lake with a stunning view of Mount Fuji, perfect for relaxation and photography.
+    </p>
+</div>
+<div class="card">
+    <img src="https://www.annahar.com/Assets/ContentPhotos/Photos/486459693_18161068405352449_1216733864854951318_n_131838.jpg">
+    <p>
+        <h3>Cherry blossoms</h3> Cherry blossoms are one of the most famous symbols of Japan. They bloom in spring and create beautiful pink scenery that attracts many visitors every year.
+    </p>
+</div>
+
+<div class="card">
+    <img src="https://media.istockphoto.com/id/1254378285/photo/the-asuza-river-in-the-foreground-and-the-myojindake-massif-in-the-background.jpg?s=170667a&w=is&k=20&c=qGgDocuUJx1Q9IH9t9n6_HD6zCTFaxB7ANI2CZmATp0="
+    <p>
+        <h3>Japanese Alps</h3> Stunning mountains covered with snow and natural landscapes.
+    </p>
+</div>
+
+    </div>
+</section>
+<section id="food">
+    <h2>Famous Japanese Cuisine</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+            <h3>Sushi</h3>
+            <p>A globally celebrated art form combining vinegared rice with fresh, high-quality seafood.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+            <h3>Ramen</h3>
+            <p>Hearty wheat noodles served in a rich, savory broth, topped with meat and vegetables.</p>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1582450871972-ab5ca641643d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80">
+            <h3>Matcha</h3>
+            <p>Finely ground green tea powder used in traditional ceremonies and modern Japanese desserts.</p>
+        </div>
+
+    </div>
+</section>
+<div style="text-align:center; margin:40px 0;">
+    <h2 style="margin-bottom:15px; color:#b50b2a;">Explore Japan</h2>
+<iframe 
+    width="80%" 
+    height="400" 
+    src="https://www.youtube.com/embed/5GEsg59aNT8" 
+    title="Japan in 2 minutes: cinematic travel film" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    referrerpolicy="strict-origin-when-cross-origin" 
+    allowfullscreen 
+    style="border-radius:15px;">
+</iframe>
+    
+</div>
+
+<section id="currency">
+    <h2>National Currency</h2>
+    <p>
+        The official currency of Japan is the <strong>Japanese Yen (¥)</strong>. It is one of the most traded currencies in the world and a symbol of Japan's economic strength.
+    </p>
+    <div style="margin-top: 30px;">
+        <div class="card" style="max-width: 500px; margin: auto;">
+            <img src="https://vid.alarabiya.net/images/2024/07/03/416784f8-6b8b-4129-a6de-cc62afe551c8/416784f8-6b8b-4129-a6de-cc62afe551c8.jpg?width=555"
+             alt="Japanese Yen">
+            <h3>Japanese Yen (JPY)</h3>
+            <p>The Yen comes in both coins (like the famous 5-yen and 50-yen with holes) and high-quality banknotes.</p>
+        </div>
+    </div>
+</section>
+<div class="footer" style="text-align:center; margin:30px;">
+    <a href="index.html" 
+       style="text-decoration:none; background:#b9122b; color:white; padding:12px 25px; border-radius:10px; display:inline-block;">
+         Back To Home
+    </a>
+</div>
+<footer>
+    © 2026 Japan Project | Made with ❤️
+</footer>
+
+</body>
+</html>
